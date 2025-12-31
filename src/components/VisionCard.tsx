@@ -48,7 +48,7 @@ const VisionCard = forwardRef<HTMLDivElement, VisionCardProps>(
           {/* Header */}
           <div className="space-y-2">
             <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">
-              2025 Digital Vision
+              2026 Digital Vision
             </p>
             <div className="w-16 h-0.5 mx-auto bg-gradient-to-r from-primary via-accent to-secondary" />
           </div>

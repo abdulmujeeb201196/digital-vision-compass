@@ -13,7 +13,7 @@ export interface QuizQuestionData {
 export const quizQuestions: QuizQuestionData[] = [
   {
     id: 'challenge',
-    question: "What's your biggest digital challenge heading into 2025?",
+    question: "What's your biggest digital challenge heading into 2026?",
     options: [
       { id: 'ai', label: 'Keeping up with AI advancements', icon: '🤖' },
       { id: 'security', label: 'Securing my data & systems', icon: '🛡️' },
