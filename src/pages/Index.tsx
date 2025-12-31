@@ -2,9 +2,9 @@ import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { toPng } from 'html-to-image';
 import { Download, Share2, RotateCcw, ArrowRight, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import StarField from '@/components/StarField';
 import DigitalEye from '@/components/DigitalEye';
-import TypewriterText from '@/components/TypewriterText';
 import QuizQuestion from '@/components/QuizQuestion';
 import VisionCard from '@/components/VisionCard';
 import { Button } from '@/components/ui/button';
@@ -64,7 +64,7 @@ const Index = () => {
       });
 
       const link = document.createElement('a');
-      link.download = `${userName.replace(/\s+/g, '-')}-2025-vision.png`;
+      link.download = `${userName.replace(/\s+/g, '-')}-2026-vision.png`;
       link.href = dataUrl;
       link.click();
 
@@ -82,12 +82,12 @@ const Index = () => {
   };
 
   const handleShare = async () => {
-    const shareText = `Just discovered my 2025 digital vision with Digital Next Path! I'm ${visionResult?.title}. What's your digital vision? #NewYearNewVision #LetsGetDigital`;
+    const shareText = `Just discovered my 2026 digital vision with Digital Next Path! I'm ${visionResult?.title}. What's your digital vision? #NewYearNewVision #LetsGetDigital`;
     
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'My 2025 Digital Vision',
+          title: 'My 2026 Digital Vision',
           text: shareText,
         });
       } catch (error) {
@@ -321,15 +321,17 @@ const Index = () => {
                     Ready to make this vision a reality?
                   </h3>
                   <p className="text-muted-foreground">
-                    Let's discuss how Digital Next Path can help you achieve your 2025 digital goals.
+                    Let's discuss how Digital Next Path can help you achieve your 2026 digital goals.
                   </p>
-                  <Button
-                    size="lg"
-                    className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-display"
-                  >
-                    Talk to Us About Your Path
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
+                  <Link to="/contact">
+                    <Button
+                      size="lg"
+                      className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-display"
+                    >
+                      Talk to Us About Your Path
+                      <ArrowRight className="ml-2 w-5 h-5" />
+                    </Button>
+                  </Link>
                 </motion.div>
               </motion.div>
             )}

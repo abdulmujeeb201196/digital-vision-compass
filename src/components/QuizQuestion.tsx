@@ -76,29 +76,31 @@ const QuizQuestion = ({
                 : "border-border bg-card/50"
             )}
           >
-            <div className="flex items-center gap-4">
-              <span className="text-2xl">{option.icon}</span>
-              <span className="font-medium text-foreground text-lg">
-                {option.label}
-              </span>
+            <div className="flex items-center justify-between w-full">
+              <div className="flex items-center gap-4">
+                <span className="text-2xl">{option.icon}</span>
+                <span className="font-medium text-foreground text-lg">
+                  {option.label}
+                </span>
+              </div>
+              
+              {/* Selection indicator */}
+              <motion.div
+                className="w-6 h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0"
+                animate={{
+                  scale: selectedOption === option.id ? 1 : 0.8,
+                  borderColor: selectedOption === option.id ? 'hsl(187 85% 53%)' : 'hsl(222 30% 20%)',
+                }}
+              >
+                {selectedOption === option.id && (
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    className="w-3 h-3 rounded-full bg-primary"
+                  />
+                )}
+              </motion.div>
             </div>
-            
-            {/* Selection indicator */}
-            <motion.div
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full border-2 border-primary flex items-center justify-center"
-              animate={{
-                scale: selectedOption === option.id ? 1 : 0.8,
-                borderColor: selectedOption === option.id ? 'hsl(187 85% 53%)' : 'hsl(222 30% 20%)',
-              }}
-            >
-              {selectedOption === option.id && (
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  className="w-3 h-3 rounded-full bg-primary"
-                />
-              )}
-            </motion.div>
           </motion.button>
         ))}
       </div>
