@@ -75,11 +75,9 @@ npm run build
 ## License
 MIT License - see LICENSE file for details.
 
----
 ## Developer
 Abdul Mujeeb
 
----
 ## Acknowledgments
 - React team for the amazing library
 - Vite team for the fast build tool
