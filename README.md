@@ -81,9 +81,9 @@ Abdul Mujeeb
 
 ---
 ## Acknowledgments
-React team for the amazing library
-Vite team for the fast build tool
-shadcn/ui for the beautiful component library
-Tailwind CSS for the utility-first CSS framework
+- React team for the amazing library
+- Vite team for the fast build tool
+- shadcn/ui for the beautiful component library
+- Tailwind CSS for the utility-first CSS framework
 ---
 *Built with modern web technologies for a fast, accessible user experience.*
